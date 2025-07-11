@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Sih3Papua.Helpers;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -71,9 +72,11 @@
 				</ul>
 
                 <div class="d-flex ms-auto" style="margin-top: 15px;">
-                    <a href="login.html" class="btn btn-warning btn-login">
-                        Login <i class="fa-solid fa-sign-in"></i>
-                    </a>
+					@if(!string.IsNullOrEmpty(ClaimIdentity.Name)) {
+						<a href="/Admin" class="btn btn-warning btn-login">Admin Area <i class="fa-solid fa-sign-in"></i></a>
+					} else {
+						<a href="/Auth/Login" class="btn btn-warning btn-login">Login <i class="fa-solid fa-sign-in"></i></a>
+					}
                 </div>
 			</div>
 		</div>
@@ -167,5 +170,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+	@await RenderSectionAsync("Styles", required: false)
 </body>
 </html>
