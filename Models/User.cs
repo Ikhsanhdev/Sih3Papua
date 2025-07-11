@@ -26,4 +26,5 @@ public partial class User
     public Guid UpdatedBy { get; set; }
 
     public DateTime? DeletedAt { get; set; }
+    public string? Role { get; set; }
 }

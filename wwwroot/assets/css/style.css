@@ -12836,6 +12836,10 @@ td.fc-header-center {
   display: inline-block;
 }
 
+.sidebar.active:hover .sidebar-logo div.light-text-logo {
+  display: inline-block;
+}
+
 .sidebar.active:hover .sidebar-logo img.logo-icon {
   display: none;
 }
@@ -12861,6 +12865,14 @@ td.fc-header-center {
 }
 
 .sidebar.active .sidebar-logo img.light-logo, .sidebar.active .sidebar-logo img.dark-logo {
+  display: none;
+}
+
+.sidebar.active .sidebar-logo div.light-text-logo, .sidebar.active .sidebar-logo div.dark-text-logo {
+  display: none;
+}
+
+.sidebar.active .sidebar-logo div.light-text-logo, .sidebar.active .sidebar-logo img.dark-text-logo {
   display: none;
 }
 
@@ -12906,6 +12918,10 @@ td.fc-header-center {
   display: none;
 }
 
+.sidebar-logo div.dark-text-logo {
+  display: none;
+}
+
 .sidebar-logo img.logo-icon {
   display: none;
 }
@@ -12933,7 +12949,15 @@ td.fc-header-center {
   display: none;
 }
 
+[data-theme=dark] .sidebar.active:hover .sidebar-logo div.light-text-logo {
+  display: none;
+}
+
 [data-theme=dark] .sidebar.active:hover .sidebar-logo img.dark-logo {
+  display: inline-block;
+}
+
+[data-theme=dark] .sidebar.active:hover .sidebar-logo div.dark-text-logo {
   display: inline-block;
 }
 
@@ -12941,11 +12965,23 @@ td.fc-header-center {
   display: none;
 }
 
+[data-theme=dark] .sidebar.active .sidebar-logo div.light-text-logo {
+  display: none;
+}
+
 [data-theme=dark] .sidebar-logo img.light-logo {
   display: none;
 }
 
+[data-theme=dark] .sidebar-logo div.light-text-logo {
+  display: none;
+}
+
 [data-theme=dark] .sidebar-logo img.dark-logo {
+  display: inline-block;
+}
+
+[data-theme=dark] .sidebar-logo div.dark-text-logo {
   display: inline-block;
 }
 

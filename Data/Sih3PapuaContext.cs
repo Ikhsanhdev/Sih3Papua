@@ -59,6 +59,9 @@ public partial class Sih3PapuaContext : DbContext
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .HasColumnName("password");
+            entity.Property(e => e.Role)
+                .HasMaxLength(255)
+                .HasColumnName("role");
             entity.Property(e => e.Phone)
                 .HasMaxLength(255)
                 .HasDefaultValueSql("NULL::character varying")
