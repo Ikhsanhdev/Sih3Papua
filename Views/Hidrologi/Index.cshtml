@@ -1,0 +1,118 @@
+@{
+    ViewBag.Title = "Hidrologi";
+}
+
+<div class="container mt-4">
+    <!-- Map Placeholder -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div id="map"
+                style="width: 100%; height: 350px; background: #eaeaea; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center;">
+            </div>
+
+            <script>
+                function initMap() {
+                    const map = new google.maps.Map(document.getElementById("map"), {
+                        center: { lat: -2.5489, lng: 118.0149 }, // Center Indonesia
+                        zoom: 5
+                    });
+                }
+            </script>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4jqcen5Xqrgck4V73aL6VepyKp2_wK1U&callback=initMap&libraries=marker&v=beta"
+                async defer></script>
+        </div>
+    </div>
+
+    <!-- Dropdown Pickers -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <select class="form-select">
+                <option selected>Pilih Opsi 1</option>
+                <option value="1">Opsi 1</option>
+                <option value="2">Opsi 2</option>
+                <option value="3">Opsi 3</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select">
+                <option selected>Pilih Opsi 2</option>
+                <option value="1">Opsi A</option>
+                <option value="2">Opsi B</option>
+                <option value="3">Opsi C</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select">
+                <option selected>Pilih Opsi 3</option>
+                <option value="1">Pilihan X</option>
+                <option value="2">Pilihan Y</option>
+                <option value="3">Pilihan Z</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table basic-table mb-0">
+                <thead>
+                    <tr>
+                        <th>S.L</th>
+                        <th>Invoice</th>
+                        <th>Name</th>
+                        <th>Issued Date</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>
+                            <a href="javascript:void(0)" class="text-primary-600">#526534</a>
+                        </td>
+                        <td>Kathryn Murphy</td>
+                        <td>25 Jan 2024</td>
+                        <td>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>
+                            <a href="javascript:void(0)" class="text-primary-600">#696589</a>
+                        </td>
+                        <td>Annette Black</td>
+                        <td>25 Jan 2024</td>
+                        <td>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>
+                            <a href="javascript:void(0)" class="text-primary-600">#256584</a>
+                        </td>
+                        <td>Ronald Richards</td>
+                        <td>10 Feb 2024</td>
+                        <td>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>
+                            <a href="javascript:void(0)" class="text-primary-600">#526587</a>
+                        </td>
+                        <td>Eleanor Pena</td>
+                        <td>10 Feb 2024</td>
+                        <td>$150.00</td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>
+                            <a href="javascript:void(0)" class="text-primary-600">#105986</a>
+                        </td>
+                        <td>Leslie Alexander</td>
+                        <td>15 Mar 2024</td>
+                        <td>$150.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

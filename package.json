@@ -18,5 +18,12 @@
     "katex": "^0.13.0",
     "merge-stream": "^2.0.0",
     "webpack": "^5.100.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-destructuring": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^10.0.0"
   }
 }
