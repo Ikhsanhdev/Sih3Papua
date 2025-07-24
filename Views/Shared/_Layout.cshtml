@@ -74,29 +74,103 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav mr-auto">
+				<ul class="navbar-nav me-auto">
 					<li
 						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">
-						<a asp-controller="Home" asp-action="Index" class="nav-link">Home</a></li>
+						<a asp-controller="Home" asp-action="Index" class="nav-link">Beranda</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Informasi
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="informasiDropdown">
+							<li><a class="dropdown-item" href="javascript:void(0)">Artikel dan Jurnal</a></li>
+							<li><a class="dropdown-item" href="javascript:void(0)">Berita</a></li>
+							<li><a class="dropdown-item" href="javascript:void(0)">Profile</a></li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Data H3
+						</a>
+						<ul class="dropdown-menu">
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Data
+									Hidrologi</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="" class="dropdown-item">item 1</a>
+										<a href="" class="dropdown-item">item 2</a>
+										<a href="" class="dropdown-item">item 3</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Data
+									Hidrogeologi</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="" class="dropdown-item">item 1</a>
+										<a href="" class="dropdown-item">item 2</a>
+										<a href="" class="dropdown-item">item 3</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Data
+									Hidrometeorologi</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="" class="dropdown-item">item 1</a>
+										<a href="" class="dropdown-item">item 2</a>
+										<a href="" class="dropdown-item">item 3</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
 					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "About" ? "active" : "")">
-						<a asp-controller="About" asp-action="Index" class="nav-link">About</a></li>
+						class="nav-item dropdown @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" || ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">
+						<a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							Geospasial
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="informasiDropdown">
+							<li>
+								<a asp-controller="Hidrologi" asp-action="Index"
+									class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" ? "active" : "")">Data
+									Hidrologi</a>
+							</li>
+							<li>
+								<a asp-controller="Hidrogeologi" asp-action="Index"
+									class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">Data
+									Hidrogeologi</a>
+							</li>
+							<li>
+								<a asp-controller="Hidrometeorologi" asp-action="Index"
+									class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrometeorologi" ? "active" : "")">Data
+									Hidrometeorologi</a>
+							</li>
+						</ul>
+					</li>
+
+
+
 					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Article" ? "active" : "")">
-						<a asp-controller="Article" asp-action="Index" class="nav-link">Article</a></li>
+						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Dokumen" ? "active" : "")">
+						<a asp-controller="Dokumen" asp-action="Index" class="nav-link">Dokumen</a>
+					</li>
 					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" ? "active" : "")">
-						<a asp-controller="Hidrologi" asp-action="Index" class="nav-link">Hidrologi</a></li>
-					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">
-						<a asp-controller="Hidrogeologi" asp-action="Index" class="nav-link">Hidrogeologi</a></li>
-					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrometeorologi" ? "active" : "")">
-						<a asp-controller="Hidrometeorologi" asp-action="Index" class="nav-link">Hidrometeorologi</a>
+						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Kontak" ? "active" : "")">
+						<a asp-controller="Kontak" asp-action="Index" class="nav-link">Kontak</a>
 					</li>
 				</ul>
 
-				<div class="d-flex ms-auto" style="margin-top: 15px;">
+				<div class="d-flex ms-auto align-items-center" style="margin-top: 15px;">
 					@if (!string.IsNullOrEmpty(ClaimIdentity.Name))
 					{
 						<a href="/Admin" class="btn btn-warning btn-login">Admin Area <i
@@ -109,6 +183,7 @@
 					}
 				</div>
 			</div>
+
 		</div>
 	</nav>
 
