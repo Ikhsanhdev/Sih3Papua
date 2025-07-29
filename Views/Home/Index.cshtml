@@ -102,59 +102,43 @@
     </div>
 </div>
 
-<section class="sih3-section">
-    <div class="container-lg shadow">
+<!-- Parallax Background -->
+<section class="parallax-section">
+    <div class="parallax-bg"></div>
+
+    <!-- Konten utama -->
+    <div class="sih3-section container-lg shadow">
         <!-- Judul & Deskripsi -->
         <div class="row justify-content-center mb-4">
             <div class="col-md-8 text-center">
                 <h1>Sistem Informasi<br><small>Hidrologi, Hidrometeorologi Dan Hidrogeologi</small></h1>
-                <p>Portal SIH3 merupakan portal informasi pengelolaan hidrologi, ... di Provinsi Kepulauan Riau.</p>
+                <p>Portal SIH3 merupakan portal informasi pengelolaan hidrologi, hidrometeorologi, dan hidrogeologi di
+                    Provinsi Kepulauan Papua hasil kolaborasi Badan Meteorologi, Klimatologi dan Geofisika (BMKG), Balai
+                    Wilayah Sungai (BWS) Papua, Dinas Pekerjaan Umum, Penataan Ruang dan Pertanahan (PUPP)
+                    Papua, dan Dinas Energi dan Sumber Daya Mineral (ESDM) Provinsi Kepulauan Papua.
+                    Keseluruhan informasi terkait sumber daya air akan di publish di portal ini, sebagai bentuk
+                    transparansi data dan informasi di Provinsi Kepulauan Papua.</p>
             </div>
         </div>
 
         <!-- Cuaca Harian -->
         <div class="row text-center mb-4 weather-list">
-            <!-- gunakan loop / data dinamis sesuai backend -->
+            <!-- Loop data backend -->
+            <!-- Contoh: -->
             <div class="col-md-2 col-6 weather-item">
-                <img src=".../berawan.png" alt="Berawan" class="icon" />
-                <h6>Bintan</h6>
-                <p>Berawan<br><strong>30°C</strong></p>
+                <img src="images/cerah.png" alt="Cerah" class="icon" />
+                <h6>Batam</h6>
+                <p>Cerah<br><strong>30°C</strong></p>
             </div>
-            <div class="col-md-2 col-6 weather-item">
-                <img src=".../berawan.png" alt="Berawan" class="icon" />
-                <h6>Bintan</h6>
-                <p>Berawan<br><strong>30°C</strong></p>
-            </div>
-            <div class="col-md-2 col-6 weather-item">
-                <img src=".../berawan.png" alt="Berawan" class="icon" />
-                <h6>Bintan</h6>
-                <p>Berawan<br><strong>30°C</strong></p>
-            </div>
-            <div class="col-md-2 col-6 weather-item">
-                <img src=".../berawan.png" alt="Berawan" class="icon" />
-                <h6>Bintan</h6>
-                <p>Berawan<br><strong>30°C</strong></p>
-            </div>
-            <div class="col-md-2 col-6 weather-item">
-                <img src=".../berawan.png" alt="Berawan" class="icon" />
-                <h6>Bintan</h6>
-                <p>Berawan<br><strong>30°C</strong></p>
-            </div>
-            <div class="col-md-2 col-6 weather-item">
-                <img src=".../berawan.png" alt="Berawan" class="icon" />
-                <h6>Bintan</h6>
-                <p>Berawan<br><strong>30°C</strong></p>
-            </div>
-            <!-- ... lainnya: Karimun, Natuna, Lingga, Anambas, Tanjungpinang -->
+            <!-- Tambahkan item cuaca lainnya -->
         </div>
 
-        <!-- Peringatan Dini -->
+        <!-- Peringatan -->
         <div class="row mb-4">
             <div class="col">
-                <div class="alert-box">
-                    <strong>Peringatan Dini Cuaca Ekstrim Berbasis Spasial – BMKG Indonesia</strong><br>
-                    Kamis, 24 Juli 2025 | Pukul 14:45 | <em>Terbit</em>: Kamis, 24 Juli 2025<br>
-                    Sumber: BMKG
+                <div class="alert-box bg-danger text-white p-3">
+                    <strong>Peringatan Dini Cuaca Ekstrim – BMKG</strong><br>
+                    Kamis, 24 Juli 2025 | Pukul 14:45 WIB
                 </div>
             </div>
         </div>
@@ -162,16 +146,17 @@
         <!-- Kondisi Perairan -->
         <div class="row">
             <div class="col">
-                <div class="sea-box">
-                    <h5>Perairan Selatan Kep. Natuna – Pulau Midai</h5>
-                    <p>Cuaca: <strong>Berawan</strong> | Angin: <strong>6‑11 Knots</strong> (Tenggara–Timur) |
-                        Gelombang: <strong>Rendah (0.5‑1.25 m)</strong></p>
-                    <small>Diperbarui: 24 Juli 2025 | 06:00 WIB</small>
+                <div class="sea-box bg-primary text-white p-3 rounded">
+                    <h5>Perairan Kep. Lingga</h5>
+                    <p>Cuaca: <strong>Hujan Ringan</strong> |
+                        Kecepatan Angin: <strong>5 - 16 Knots</strong> |
+                        Gelombang: <strong>0.5 - 1.25 m</strong></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <section class="ftco-section">
     <div class="container-lg">
@@ -326,11 +311,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-12 order-lg-2">
-                <div class="benifit-img">
-                    <img src="~/images/bot.jpg" alt="">
-                    <div class="img-meta">
+                <div class="benifit-img" style="position:relative;">
+                    <img src="~/images/bot.jpg" alt="" style="width:100%; display:block;">
+                    <div class="img-meta"
+                        style="position:absolute; top:0; left:0; width:100%; background:rgba(0,128,128,0.85); padding:20px; color:white; z-index:2; border-top-left-radius:6px; border-top-right-radius:6px;">
                         <label style="font-size: 16px;margin-bottom:10px;"><b>PENGUNJUNG</b></label>
-
                         <div style="display: flex; justify-content: space-between; font-size: 12px;">
                             <b>Hari ini </b>
                             <span style="color: rgb(251, 255, 0); font-size: 13px;">32</span>
@@ -355,7 +340,6 @@
                             <span style="color: rgb(251, 255, 0); font-size: 13px;">3</span>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12">

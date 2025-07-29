@@ -92,3 +92,40 @@ body {
 .dropdown-menu li:hover > .dropdown-menu {
   display: block;
 }
+
+/* Parallax Section */
+.parallax-section {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  background-image: url('/images/about.jpg'); /* Gunakan slash awal tanpa ~ */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Konten kotak putih */
+.sih3-section {
+  background: white;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+/* Tambahan styling */
+.weather-item .icon {
+  width: 60px;
+  height: auto;
+}
