@@ -79,15 +79,31 @@
 						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">
 						<a asp-controller="Home" asp-action="Index" class="nav-link">Beranda</a>
 					</li>
-					<li class="nav-item dropdown">
+					<li
+						class="nav-item dropdown @(ViewContext.RouteData.Values["controller"]?.ToString() == "Artikel" ? "active" : "")">
+					</li>
+					<li
+						class="nav-item dropdown @(new[] { "Artikel", "Berita", "Profile" }.Contains(ViewContext.RouteData.Values["action"]?.ToString()) ? "active" : "")">
 						<a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false">
 							Informasi
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="informasiDropdown">
-							<li><a class="dropdown-item" href="javascript:void(0)">Artikel dan Jurnal</a></li>
-							<li><a class="dropdown-item" href="javascript:void(0)">Berita</a></li>
-							<li><a class="dropdown-item" href="javascript:void(0)">Profile</a></li>
+							<li>
+								<a asp-controller="Informasi" asp-action="Artikel"
+									class="dropdown-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Artikel" ? "active" : "")">
+									Artikel</a>
+							</li>
+							<li>
+								<a asp-controller="Informasi" asp-action="Berita"
+									class="dropdown-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Berita" ? "active" : "")">
+									Berita</a>
+							</li>
+							<li>
+								<a asp-controller="Informasi" asp-action="Profile"
+									class="dropdown-item @(ViewContext.RouteData.Values["action"]?.ToString() == "Profile" ? "active" : "")">
+									Profile</a>
+							</li>
 						</ul>
 					</li>
 
