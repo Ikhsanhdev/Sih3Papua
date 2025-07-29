@@ -8,7 +8,11 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -19,4 +23,72 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.navbar {
+  background-color: #f9c846;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: #f1b400;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Tampilkan dropdown saat hover */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Submenu */
+.dropdown-menu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  display: none;
+}
+
+/* Tampilkan submenu saat hover item-nya */
+.dropdown-menu li:hover > .dropdown-menu {
+  display: block;
 }

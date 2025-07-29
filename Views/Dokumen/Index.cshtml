@@ -1,0 +1,159 @@
+@{
+    ViewBag.Title = "Dokumen";
+    // Dummy data untuk contoh, ganti dengan data dari Model jika sudah ada
+    var dokumens = new List<dynamic> {
+new { No = 1, Nama = "Laporan Curah Hujan", Tanggal = "2024-06-01" },
+new { No = 2, Nama = "Data Sungai", Tanggal = "2024-06-02" },
+new { No = 3, Nama = "Analisis Cuaca", Tanggal = "2024-06-03" },
+new { No = 4, Nama = "Peta Banjir", Tanggal = "2024-06-04" },
+new { No = 5, Nama = "Laporan Angin", Tanggal = "2024-06-05" }
+};
+    var page = 1;
+    var pageSize = 3;
+    var total = dokumens.Count;
+    var totalPages = (int)Math.Ceiling((double)total / pageSize);
+    var pagedDokumens = dokumens.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+    var search = "";
+}
+
+<style>
+    .modern-container {
+        max-width: 700px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        padding: 32px 24px;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    .modern-filter {
+        margin-bottom: 18px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .modern-filter input[type="text"] {
+        flex: 1;
+        padding: 8px 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #fafbfc;
+        transition: border 0.2s;
+    }
+
+    .modern-filter button {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 6px;
+        background: #1976d2;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    .modern-filter button:hover {
+        background: #1565c0;
+    }
+
+    .modern-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 18px;
+    }
+
+    .modern-table th,
+    .modern-table td {
+        padding: 10px 12px;
+        text-align: left;
+    }
+
+    .modern-table th {
+        background: #f5f7fa;
+        font-weight: 600;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .modern-table tr {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .modern-table tr:last-child {
+        border-bottom: none;
+    }
+
+    .modern-pagination {
+        display: flex;
+        justify-content: flex-end;
+        gap: 6px;
+    }
+
+    .modern-pagination button {
+        border: none;
+        background: #e3eafc;
+        color: #1976d2;
+        padding: 6px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.2s;
+    }
+
+    .modern-pagination button.active,
+    .modern-pagination button:hover {
+        background: #1976d2;
+        color: #fff;
+    }
+
+    .modern-pagination button:disabled {
+        background: #f0f0f0;
+        color: #b0b0b0;
+        cursor: default;
+    }
+</style>
+
+<div class="modern-container">
+    <h2 style="margin-bottom: 18px;">@ViewBag.Title</h2>
+    <form method="get" class="modern-filter">
+        <input type="text" name="search" placeholder="Cari dokumen..." value="@search" />
+        <button type="submit">Filter</button>
+    </form>
+    <table class="modern-table">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Dokumen</th>
+                <th>Tanggal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in pagedDokumens)
+            {
+                <tr>
+                    <td>@d.No</td>
+                    <td>@d.Nama</td>
+                    <td>@d.Tanggal</td>
+                </tr>
+            }
+            @if (!pagedDokumens.Any())
+            {
+                <tr>
+                    <td colspan="3" style="text-align:center;color:#aaa;">Tidak ada data</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="modern-pagination">
+        <button type="button" @(page == 1 ? "disabled" : "")
+            onclick="window.location='?page=@(page - 1)&search=@search'">&laquo;</button>
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            <button type="button" class="@(i == page ? "active" : "")"
+                onclick="window.location='?page=@i&search=@search'">@i</button>
+        }
+        <button type="button" @(page == totalPages ? "disabled" : "")
+            onclick="window.location='?page=@(page + 1)&search=@search'">&raquo;</button>
+    </div>
+</div>

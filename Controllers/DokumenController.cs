@@ -4,24 +4,16 @@ using Sih3Papua.Models;
 
 namespace Sih3Papua.Controllers;
 
-public class InformasiController : Controller
+public class DokumenController : Controller
 {
-    private readonly ILogger<InformasiController> _logger;
+    private readonly ILogger<DokumenController> _logger;
 
-    public InformasiController(ILogger<InformasiController> logger)
+    public DokumenController(ILogger<DokumenController> logger)
     {
         _logger = logger;
     }
-    public IActionResult Artikel()
-    {
-        return View();
-    }
 
-    public IActionResult Berita()
-    {
-        return View();
-    }
-    public IActionResult Profile()
+    public IActionResult Index()
     {
         return View();
     }

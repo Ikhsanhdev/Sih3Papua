@@ -107,83 +107,76 @@
 						</ul>
 					</li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Data H3
-						</a>
+
+					<li class="nav-item">
+						<a class="nav-link dropdown-toggle" href="#">Data H3 </a>
 						<ul class="dropdown-menu">
-							<li class="dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Data
-									Hidrologi</a>
+							<li>
+								<a class="dropdown-item" href="#">Data Hidrologi</a>
 								<ul class="dropdown-menu">
-									<li>
-										<a href="" class="dropdown-item">item 1</a>
-										<a href="" class="dropdown-item">item 2</a>
-										<a href="" class="dropdown-item">item 3</a>
+									<li><a class="dropdown-item" href="https://telemetrisihkabwspapua.higertech.com/"
+											target="_blank">Monitoring
+											telemetri</a>
+									</li>
+									<li><a class="dropdown-item" href="https://sihka.pusair-pu.go.id/"
+											target="_blank">SIHKA</a>
+									</li>
+								</ul>
+							<li>
+								<a class="dropdown-item" href="#">Data Hidrogeologi</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">DATABASE DINAS ESDM</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">Data Hidrometeorologi</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="https://www.bmkg.go.id/">Informasi Cuaca BMKG</a>
 									</li>
 								</ul>
 							</li>
-							<li class="dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Data
-									Hidrogeologi</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="" class="dropdown-item">item 1</a>
-										<a href="" class="dropdown-item">item 2</a>
-										<a href="" class="dropdown-item">item 3</a>
-									</li>
-								</ul>
-							</li>
-							<li class="dropend">
-								<a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Data
-									Hidrometeorologi</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="" class="dropdown-item">item 1</a>
-										<a href="" class="dropdown-item">item 2</a>
-										<a href="" class="dropdown-item">item 3</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
 					</li>
+				</ul>
+				</li>
 
-					<li
-						class="nav-item dropdown @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" || ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">
-						<a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							Geospasial
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="informasiDropdown">
-							<li>
-								<a asp-controller="Hidrologi" asp-action="Index"
-									class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" ? "active" : "")">Data
-									Hidrologi</a>
-							</li>
-							<li>
-								<a asp-controller="Hidrogeologi" asp-action="Index"
-									class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">Data
-									Hidrogeologi</a>
-							</li>
-							<li>
-								<a asp-controller="Hidrometeorologi" asp-action="Index"
-									class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrometeorologi" ? "active" : "")">Data
-									Hidrometeorologi</a>
-							</li>
-						</ul>
-					</li>
+				<li
+					class="nav-item dropdown @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" || ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrometeorologi" || ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">
+					<a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button"
+						data-bs-toggle="dropdown" aria-expanded="false">
+						Geospasial
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="informasiDropdown">
+						<li>
+							<a asp-controller="Hidrologi" asp-action="Index"
+								class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrologi" ? "active" : "")">Data
+								Hidrologi</a>
+						</li>
+						<li>
+							<a asp-controller="Hidrogeologi" asp-action="Index"
+								class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrogeologi" ? "active" : "")">Data
+								Hidrogeologi</a>
+						</li>
+						<li>
+							<a asp-controller="Hidrometeorologi" asp-action="Index"
+								class="dropdown-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Hidrometeorologi" ? "active" : "")">Data
+								Hidrometeorologi</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="https://sihka.pusair-pu.go.id/" target="_blank">SIHKA</a>
+						</li>
+					</ul>
+				</li>
 
 
 
-					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Dokumen" ? "active" : "")">
-						<a asp-controller="Dokumen" asp-action="Index" class="nav-link">Dokumen</a>
-					</li>
-					<li
-						class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Kontak" ? "active" : "")">
-						<a asp-controller="Kontak" asp-action="Index" class="nav-link">Kontak</a>
-					</li>
+				<li
+					class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Dokumen" ? "active" : "")">
+					<a asp-controller="Dokumen" asp-action="Index" class="nav-link">Dokumen</a>
+				</li>
+				<li
+					class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Kontak" ? "active" : "")">
+					<a asp-controller="Kontak" asp-action="Index" class="nav-link">Kontak</a>
+				</li>
 				</ul>
 
 				<div class="d-flex ms-auto align-items-center" style="margin-top: 15px;">
