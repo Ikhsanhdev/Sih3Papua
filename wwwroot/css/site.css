@@ -101,7 +101,7 @@ body {
 }
 
 .parallax-bg {
-  background-image: url('/images/about.jpg'); /* Gunakan slash awal tanpa ~ */
+  background-image: url('/images/paralax.jpg'); /* Gunakan slash awal tanpa ~ */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

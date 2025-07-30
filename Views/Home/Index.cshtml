@@ -1,63 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-<style>
-    .sih3-section {
-        padding: 2.5rem 0;
-        background: #fff;
-    }
 
-    .sih3-section h1 {
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    .sih3-section p {
-        color: #555;
-    }
-
-    .weather-list {
-        margin-top: 1rem;
-    }
-
-    .weather-item {
-        background: #e6f2f8;
-        border-radius: 6px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .weather-item .icon {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 0.5rem;
-    }
-
-    .alert-box {
-        border-left: 4px solid #ffc107;
-        background: #fff3cd;
-        padding: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .sea-box {
-        background: #f0f8ff;
-        padding: 1rem;
-        border-radius: 6px;
-        font-size: 0.9rem;
-    }
-
-    .sea-box h5 {
-        margin-bottom: 0.5rem;
-    }
-
-    .sea-box small {
-        color: #666;
-    }
-</style>
-
+<!-- ========================= HERO / BANNER SECTION ========================= -->
 <div class="hero-wrap">
     <div class="home-slider owl-carousel">
+        <!-- Banner 1 -->
         <div class="slider-item" style="background-image:url(images/carousel-1.jpg);">
             <div class="overlay"></div>
             <div class="container">
@@ -71,7 +19,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Banner 2 -->
         <div class="slider-item" style="background-image:url(images/carousel-2.jpg);">
             <div class="overlay"></div>
             <div class="container">
@@ -85,7 +33,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- Banner 3 -->
         <div class="slider-item" style="background-image:url(images/carousel-3.jpg);">
             <div class="overlay"></div>
             <div class="container">
@@ -102,62 +50,7 @@
     </div>
 </div>
 
-<!-- Parallax Background -->
-<section class="parallax-section">
-    <div class="parallax-bg"></div>
-
-    <!-- Konten utama -->
-    <div class="sih3-section container-lg shadow">
-        <!-- Judul & Deskripsi -->
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-8 text-center">
-                <h1>Sistem Informasi<br><small>Hidrologi, Hidrometeorologi Dan Hidrogeologi</small></h1>
-                <p>Portal SIH3 merupakan portal informasi pengelolaan hidrologi, hidrometeorologi, dan hidrogeologi di
-                    Provinsi Kepulauan Papua hasil kolaborasi Badan Meteorologi, Klimatologi dan Geofisika (BMKG), Balai
-                    Wilayah Sungai (BWS) Papua, Dinas Pekerjaan Umum, Penataan Ruang dan Pertanahan (PUPP)
-                    Papua, dan Dinas Energi dan Sumber Daya Mineral (ESDM) Provinsi Kepulauan Papua.
-                    Keseluruhan informasi terkait sumber daya air akan di publish di portal ini, sebagai bentuk
-                    transparansi data dan informasi di Provinsi Kepulauan Papua.</p>
-            </div>
-        </div>
-
-        <!-- Cuaca Harian -->
-        <div class="row text-center mb-4 weather-list">
-            <!-- Loop data backend -->
-            <!-- Contoh: -->
-            <div class="col-md-2 col-6 weather-item">
-                <img src="images/cerah.png" alt="Cerah" class="icon" />
-                <h6>Batam</h6>
-                <p>Cerah<br><strong>30°C</strong></p>
-            </div>
-            <!-- Tambahkan item cuaca lainnya -->
-        </div>
-
-        <!-- Peringatan -->
-        <div class="row mb-4">
-            <div class="col">
-                <div class="alert-box bg-danger text-white p-3">
-                    <strong>Peringatan Dini Cuaca Ekstrim – BMKG</strong><br>
-                    Kamis, 24 Juli 2025 | Pukul 14:45 WIB
-                </div>
-            </div>
-        </div>
-
-        <!-- Kondisi Perairan -->
-        <div class="row">
-            <div class="col">
-                <div class="sea-box bg-primary text-white p-3 rounded">
-                    <h5>Perairan Kep. Lingga</h5>
-                    <p>Cuaca: <strong>Hujan Ringan</strong> |
-                        Kecepatan Angin: <strong>5 - 16 Knots</strong> |
-                        Gelombang: <strong>0.5 - 1.25 m</strong></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+<!-- ========================= RECENT ARTICLE SECTION ========================= -->
 <section class="ftco-section">
     <div class="container-lg">
         <div class="row justify-content-center mb-5 pb-3">
@@ -167,67 +60,67 @@
             </div>
         </div>
         <div class="row d-flex">
+            <!-- Article 1 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <a href="blog-single.html" class="block-20 rounded"
-                        style="background-image: url('images/image_1.jpg');">
-                    </a>
+                        style="background-image: url('images/image_1.jpg');"></a>
                     <div class="text mt-3 text-center">
                         <div class="meta mb-2">
                             <div><a href="#">January 30, 2020</a></div>
                             <div><a href="#">Admin</a></div>
                             <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                         </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
+                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind
+                                texts</a></h3>
                     </div>
                 </div>
             </div>
+            <!-- Article 2 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <a href="blog-single.html" class="block-20 rounded"
-                        style="background-image: url('images/image_2.jpg');">
-                    </a>
+                        style="background-image: url('images/image_2.jpg');"></a>
                     <div class="text mt-3 text-center">
                         <div class="meta mb-2">
                             <div><a href="#">January 30, 2020</a></div>
                             <div><a href="#">Admin</a></div>
                             <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                         </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
+                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind
+                                texts</a></h3>
                     </div>
                 </div>
             </div>
+            <!-- Article 3 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <a href="blog-single.html" class="block-20 rounded"
-                        style="background-image: url('images/image_3.jpg');">
-                    </a>
+                        style="background-image: url('images/image_3.jpg');"></a>
                     <div class="text mt-3 text-center">
                         <div class="meta mb-2">
                             <div><a href="#">January 30, 2020</a></div>
                             <div><a href="#">Admin</a></div>
                             <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                         </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
+                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind
+                                texts</a></h3>
                     </div>
                 </div>
             </div>
+            <!-- Article 4 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <a href="blog-single.html" class="block-20 rounded"
-                        style="background-image: url('images/image_4.jpg');">
-                    </a>
+                        style="background-image: url('images/image_4.jpg');"></a>
                     <div class="text mt-3 text-center">
                         <div class="meta mb-2">
                             <div><a href="#">January 30, 2020</a></div>
                             <div><a href="#">Admin</a></div>
                             <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                         </div>
-                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
+                        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind
+                                texts</a></h3>
                     </div>
                 </div>
             </div>
@@ -235,6 +128,55 @@
     </div>
 </section>
 
+<!-- ========================= PARALLAX / PORTAL INFO SECTION ========================= -->
+<section class="parallax-section">
+    <div class="parallax-bg"></div>
+    <div class="sih3-section container-lg shadow">
+        <!-- Judul & Deskripsi Portal -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8 text-center">
+                <h1>Sistem Informasi<br><small>Hidrologi, Hidrometeorologi Dan Hidrogeologi</small></h1>
+                <p>Portal SIH3 merupakan portal informasi pengelolaan hidrologi, hidrometeorologi, dan hidrogeologi di
+                    Provinsi Kepulauan Papua hasil kolaborasi Badan Meteorologi, Klimatologi dan Geofisika (BMKG), Balai
+                    Wilayah Sungai (BWS) Papua, Dinas Pekerjaan Umum, Penataan Ruang dan Pertanahan (PUPP) Papua, dan
+                    Dinas Energi dan Sumber Daya Mineral (ESDM) Provinsi Kepulauan Papua. Keseluruhan informasi terkait
+                    sumber daya air akan di publish di portal ini, sebagai bentuk transparansi data dan informasi di
+                    Provinsi Kepulauan Papua.</p>
+            </div>
+        </div>
+        <!-- Cuaca Harian (Weather List) -->
+        <div class="row text-center mb-4 weather-list">
+            <!-- Loop data backend -->
+            <div class="col-md-2 col-6 weather-item">
+                <img src="images/cerah.png" alt="Cerah" class="icon" />
+                <h6>Batam</h6>
+                <p>Cerah<br><strong>30°C</strong></p>
+            </div>
+            <!-- Tambahkan item cuaca lainnya -->
+        </div>
+        <!-- Peringatan Dini -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="alert-box bg-danger text-white p-3">
+                    <strong>Peringatan Dini Cuaca Ekstrim – BMKG</strong><br>
+                    Kamis, 24 Juli 2025 | Pukul 14:45 WIB
+                </div>
+            </div>
+        </div>
+        <!-- Kondisi Perairan -->
+        <div class="row">
+            <div class="col">
+                <div class="sea-box bg-primary text-white p-3 rounded">
+                    <h5>Perairan Kep. Lingga</h5>
+                    <p>Cuaca: <strong>Hujan Ringan</strong> | Kecepatan Angin: <strong>5 - 16 Knots</strong> |
+                        Gelombang: <strong>0.5 - 1.25 m</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= NEWS SECTION ========================= -->
 <section class="ftco-section">
     <div class="container-lg">
         <div class="row justify-content-center mb-5 pb-3">
@@ -253,7 +195,6 @@
                     </a>
                 </div>
             </div>
-
             <!-- Dua Gambar Kecil di Kanan -->
             <div class="col-md-6 d-flex flex-column justify-content-between">
                 <div class="blog-entry mb-5 flex-fill">
@@ -273,6 +214,7 @@
     </div>
 </section>
 
+<!-- ========================= BULETIN SECTION ========================= -->
 <section class="ftco-section">
     <div class="container-lg">
         <div class="row justify-content-center mb-5 pb-3">
@@ -281,23 +223,26 @@
                 <h2>Buletin</h2>
             </div>
         </div>
-        <!-- Semua gambar dalam satu row agar berjajar horizontal -->
         <div class="row d-flex justify-content-start">
+            <!-- Buletin 1 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <img src="images/buletin_1.jpg" class="img-fluid rounded" alt="Buletin Juni 2025">
                 </div>
             </div>
+            <!-- Buletin 2 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <img src="images/buletin_1.jpg" class="img-fluid rounded" alt="Buletin Maret 2025">
                 </div>
             </div>
+            <!-- Buletin 3 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <img src="images/buletin_1.jpg" class="img-fluid rounded" alt="Buletin Februari 2025">
                 </div>
             </div>
+            <!-- Buletin 4 -->
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
                     <img src="images/buletin_1.jpg" class="img-fluid rounded" alt="Buletin Januari 2025">
@@ -307,9 +252,11 @@
     </div>
 </section>
 
+<!-- ========================= COLLABORATION / BENEFIT SECTION ========================= -->
 <section class="benifit section-padding" style="margin-top:-100px;">
     <div class="container">
         <div class="row">
+            <!-- Gambar Bot & Statistik Pengunjung -->
             <div class="col-lg-6 col-sm-12 order-lg-2">
                 <div class="benifit-img" style="position:relative;">
                     <img src="~/images/bot.jpg" alt="" style="width:100%; display:block;">
@@ -342,27 +289,31 @@
                     </div>
                 </div>
             </div>
+            <!-- Kolaborasi SIH3 -->
             <div class="col-lg-6 col-sm-12">
                 <div class="benifit2-txt">
                     <h2 class="section-title">Kolaborasi SIH3</h2>
                     <div class="benifit-options">
+                        <!-- Kolaborator 1 -->
                         <div class="single-benifit" style="display: flex; align-items: center; margin-bottom: 20px;">
                             <center>
                                 <img src="~/images/logo-bmkg.png" style="width: 80px; margin-left: 35px;">
                             </center>
-                            <div class="sb-txt" style="margin-left: 15px;"> <!-- Reduced the left margin -->
+                            <div class="sb-txt" style="margin-left: 15px;">
                                 <p>Badan Meteorologi, Klimatologi dan Geofisika Provinsi Kepulauan Riau</p>
                             </div>
                         </div>
+                        <!-- Kolaborator 2 -->
                         <div class="single-benifit" style="display: flex; align-items: center; margin-bottom: 20px;">
                             <img src="~/images/logo-pu.png" style="width: 80px; margin-left: 35px;">
-                            <div class="sb-txt" style="margin-left: 15px;"> <!-- Reduced the left margin -->
+                            <div class="sb-txt" style="margin-left: 15px;">
                                 <p>Balai Wilayah Sungai Sumatera IV</p>
                             </div>
                         </div>
+                        <!-- Kolaborator 3 & 4 -->
                         <div class="single-benifit" style="display: flex; align-items: center;">
                             <img src="~/images/logo-qw3.png" style="width: 80px; margin-left: 35px;">
-                            <div class="sb-txt" style="margin-left: 15px;"> <!-- Reduced the left margin -->
+                            <div class="sb-txt" style="margin-left: 15px;">
                                 <p>Dinas Pekerjaan Umum, Penataan Ruang dan Pertanahan Provinsi Kepulauan Riau</p><br>
                                 <p style="margin-top: -20px;">Dinas Energi dan Sumber Daya Mineral Provinsi Kepulauan
                                     Riau</p>
@@ -371,8 +322,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
 </section>
