@@ -1,39 +1,59 @@
 @{
     ViewBag.Title = "Profile";
 }
-<div>
-    <h2>tentang kami</h2>
-    <link rel="stylesheet" href="youtube.com">
-    <link rel="stylesheet" href="youtube.com">
-    <p>peta Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores minima esse dignissimos nihil magnam
-        ducimus soluta expedita et minus praesentium similique asperiores officiis cum quam, at laboriosam nesciunt
-        neque! Numquam!</p>
-    <p>peta Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores minima esse dignissimos nihil magnam
-        ducimus soluta expedita et minus praesentium similique asperiores officiis cum quam, at laboriosam nesciunt
-        neque! Numquam!</p>
-</div>
-<div>
-    <div class="benifit2-txt">
-        <h2 class="section-title">Kolaborasi SIH3</h2>
-        <div class="benifit-options">
-            <div class="single-benifit" style="display: flex; align-items: center; margin-bottom: 20px;">
-                <center>
-                    <img src="~/images/logo-bmkg.png" style="width: 80px; margin-left: 35px;">
-                </center>
-                <div class="sb-txt" style="margin-left: 15px;"> <!-- Reduced the left margin -->
-                    <h5>BMKG</h5>
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="card-title mb-3">Tentang Kami</h2>
+
+                    <p class="card-text">
+                        <a href="https://simtaru.papua.go.id/layers/geonode_data:geonode:POTENSI_AIR_TANAH_AR_250K_PAPUA"
+                            target="_blank">
+                            Peta Potensi Air Tanah (ESDM, Penanaman Modal dan Pelayanan Terpadu Satu Pintu Provinsi
+                            Papua)
+                        </a>
+                    </p>
                 </div>
             </div>
-            <div class="single-benifit" style="display: flex; align-items: center; margin-bottom: 20px;">
-                <img src="~/images/logo-pu.png" style="width: 80px; margin-left: 35px;">
-                <div class="sb-txt" style="margin-left: 15px;"> <!-- Reduced the left margin -->
-                    <h5>BWS Papua</h5>
+            <div class="mb-4 text-center">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/ITuYe3y1oc0" title="YouTube video"
+                        allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="single-benifit" style="display: flex; align-items: center;">
-                <img src="~/images/logo-esdm.png" style="width: 80px; margin-left: 35px;">
-                <div class="sb-txt" style="margin-left: 15px;"> <!-- Reduced the left margin -->
-                    <h5>Dinas ESDM</h5>
+            <div class="mb-4 text-center">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/eeN9uAfW9Ds" title="YouTube video"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <h2 class="card-title mb-4">Kolaborasi</h2>
+                <div class="d-flex flex-row justify-content-center align-items-center gap-4 flex-wrap">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="~/images/logo-pu.png" alt="BWS Papua" class="mb-2"
+                            style="width:60px; height:60px; object-fit:contain;">
+                        <div>
+                            <h5 class="mb-0">BWS Papua</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="~/images/logo-bmkg.png" alt="BMKG" class="mb-2"
+                            style="width:60px; height:60px; object-fit:contain;">
+                        <div>
+                            <h5 class="mb-0">BMKG</h5>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="~/images/logo-esdm.png" alt="Dinas ESDM" class="mb-2"
+                            style="width:60px; height:60px; object-fit:contain;">
+                        <div>
+                            <h5 class="mb-0">Dinas ESDM</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

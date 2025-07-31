@@ -2,86 +2,71 @@
     ViewData["Title"] = "Kontak";
 }
 
-<!-- ========================= CONTACT SECTION ========================= -->
-<section class="contact-section"
-    style="padding: 40px 0; background: url('/images/contact.jpg') center center/cover no-repeat; min-height: 100vh;">
-    <div class="container-lg"
-        style="max-width: 1200px; margin: auto; background: rgba(255,255,255,0.80); border-radius: 14px; box-shadow: 0 2px 16px rgba(0,0,0,0.10); padding: 32px 24px; backdrop-filter: blur(2px);">
-        <div class="row mb-4">
-            <div class="col-12 text-center">
-                <h2 style="font-weight: 600; letter-spacing: 1px;">Kontak Kami</h2>
-                <p style="color: #888;">Hubungi kami untuk pertanyaan, saran, atau kerjasama.</p>
-            </div>
-        </div>
-        <!-- Atas: Info, Kontak, Media Sosial (Selalu di paling atas) -->
-        <div class="row mb-4" style="display: flex; gap: 18px;">
-            <!-- Kotak Alamat -->
-            <div class="col-md-4 col-12 mb-3 mb-md-0" style="display: flex;">
-                <div
-                    style="background: rgba(255,255,255,0.65); border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.03); padding: 18px 16px; backdrop-filter: blur(1.5px); display: flex; flex-direction: column; align-items: center; width: 100%;">
-                    <div
-                        style="background: #007bff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
-                        <i class="fas fa-map-marker-alt" style="color: #fff; font-size: 22px;"></i>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Alamat</div>
-                        <div style="color: #555; font-size: 15px;">Jl. Raya Abepura Wahno, Samping Kompleks Otonom,
-                            Abepura, Kota Jayapura, Papua, 99225</div>
-                    </div>
+<div class="contact-section"
+    style="background: url('/images/contact.jpg') center center/cover no-repeat fixed; min-height: 100vh; background-attachment: fixed; background-size: cover; background-position: center;">
+    <div class="container-lg py-5">
+        <!-- Bagian Atas: Info Kontak -->
+        <div class="row text-center mb-5">
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rgba(255, 255, 255, 0.4) bg-opacity-75 rounded shadow-sm h-100">
+                    <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                    <h6 class="fw-bold">OUR MAIN OFFICE</h6>
+                    <p class="text-muted mb-0">Jl. Raya Abepura Wahno<br>Samping Kompleks Otonom,<br>Jayapura, Papua
+                        99225</p>
                 </div>
             </div>
-            <!-- Kotak Kontak -->
-            <div class="col-md-4 col-12 mb-3 mb-md-0" style="display: flex;">
-                <div
-                    style="background: rgba(255,255,255,0.65); border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.03); padding: 18px 16px; backdrop-filter: blur(1.5px); display: flex; flex-direction: column; align-items: center; width: 100%;">
-                    <div
-                        style="background: #28a745; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
-                        <i class="fas fa-phone-alt" style="color: #fff; font-size: 20px;"></i>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Kontak</div>
-                        <div style="color: #555; font-size: 15px;">Telepon: <a href="tel:+62987654321"
-                                style="color: #007bff; text-decoration: none;">(0967) 123456</a><br>Email: <a
-                                href="mailto:info@sih3papua.id"
-                                style="color: #007bff; text-decoration: none;">info@sih3papua.id</a></div>
-                    </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rgba(255, 255, 255, 0.4) bg-opacity-75 rounded shadow-sm h-100">
+                    <i class="fas fa-phone fa-2x text-success mb-3"></i>
+                    <h6 class="fw-bold">PHONE NUMBER</h6>
+                    <p class="text-muted mb-0">0967-123456<br>0888-8888-8888 (Toll Free)</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rgba(255, 255, 255, 0.4) bg-opacity-75 rounded shadow-sm h-100">
+                    <i class="fas fa-fax fa-2x text-secondary mb-3"></i>
+                    <h6 class="fw-bold">FAX</h6>
+                    <p class="text-muted mb-0">1-234-567-8900</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-4 rgba(255, 255, 255, 0.4) bg-opacity-75 rounded shadow-sm h-100">
+                    <i class="fas fa-envelope fa-2x text-warning mb-3"></i>
+                    <h6 class="fw-bold">EMAIL</h6>
+                    <p class="text-muted mb-0"><a href="mailto:info@sih3papua.id"
+                            class="text-decoration-none">info@sih3papua.id</a></p>
                 </div>
             </div>
         </div>
-        <!-- Bawah: Map & Saran dalam satu box -->
-        <div class="row g-4 align-items-stretch" style="display: flex; flex-wrap: wrap;">
-            <div class="col-12" style="display: flex; flex-wrap: wrap; gap: 18px;">
-                <div
-                    style="background: rgba(255,255,255,0.65); border-radius: 14px; box-shadow: 0 1px 8px rgba(0,0,0,0.04); backdrop-filter: blur(1.5px); display: flex; flex-direction: row; width: 100%; min-height: 400px; padding: 0; overflow: hidden;">
-                    <!-- MAP (LEFT) -->
-                    <div style="flex: 1 1 60%; min-width: 280px; display: flex; align-items: stretch;">
-                        <iframe src="https://www.google.com/maps?q=-2.627222,140.632222&hl=id&z=17&output=embed"
-                            width="100%" height="400"
-                            style="border:0; background: transparent; min-height: 400px; width: 100%;"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!-- Kotak Saran (KANAN) -->
-                    <div
-                        style="flex: 1 1 40%; min-width: 260px; display: flex; align-items: center; justify-content: center; padding: 32px 18px;">
-                        <div style="width: 100%;">
-                            <h5 style="font-weight: 500; margin-bottom: 12px; text-align: center;">Kotak Saran</h5>
-                            <form method="post" style="display: flex; flex-direction: column; gap: 12px;">
-                                <input type="text" name="nama" placeholder="Nama" required
-                                    style="padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; background: #fafbfc;">
-                                <input type="email" name="email" placeholder="Email" required
-                                    style="padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; background: #fafbfc;">
-                                <textarea name="pesan" placeholder="Tulis saran atau pesan Anda..." rows="3" required
-                                    style="padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; background: #fafbfc;"></textarea>
-                                <button type="submit"
-                                    style="padding: 10px 32px; background: #007bff; color: #fff; border: none; border-radius: 6px; font-weight: 500; letter-spacing: 1px; transition: background 0.2s;">Kirim</button>
-                            </form>
+
+        <!-- Bagian Form dan Map -->
+        <div class="row g-0" style="min-height: 500px;">
+            <!-- Form Kontak -->
+            <div class="col-md-6 d-flex align-items-stretch">
+                <div class="p-4 w-100 d-flex flex-column justify-content-center"
+                    style="background: rgba(0,0,0,0.4); color: #fff; border-radius: 0.5rem;">
+                    <h4 class="mb-4">Contact info</h4>
+                    <form method="post" class="d-flex flex-column gap-3">
+                        <div class="d-flex gap-2">
+                            <input type="email" name="email" class="form-control"
+                                placeholder="Enter a valid email address" required />
+                            <input type="text" name="nama" class="form-control" placeholder="Enter your Name"
+                                required />
                         </div>
-                    </div>
+                        <textarea name="pesan" class="form-control" rows="4" placeholder="Enter your message"
+                            required></textarea>
+                        <button type="submit" class="btn btn-light fw-bold w-100">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-md-6 d-flex align-items-stretch">
+                <div class="w-100">
+                    <iframe src="https://www.google.com/maps?q=40.7831,-73.9712&hl=en&z=12&output=embed" width="100%"
+                        height="100%" style="border: none;"></iframe>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Font Awesome CDN for social icons (if not already included in layout) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</div>
